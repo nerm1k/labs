@@ -1,0 +1,11 @@
+D:\important\иип\laba6\functions\functions\bin\Debug\functions.exe.config
+D:\important\иип\laba6\functions\functions\bin\Debug\functions.exe
+D:\important\иип\laba6\functions\functions\bin\Debug\functions.pdb
+D:\important\иип\laba6\functions\functions\obj\Debug\functions.csproj.AssemblyReference.cache
+D:\important\иип\laba6\functions\functions\obj\Debug\functions.csproj.SuggestedBindingRedirects.cache
+D:\important\иип\laba6\functions\functions\obj\Debug\functions.Form1.resources
+D:\important\иип\laba6\functions\functions\obj\Debug\functions.Properties.Resources.resources
+D:\important\иип\laba6\functions\functions\obj\Debug\functions.csproj.GenerateResource.cache
+D:\important\иип\laba6\functions\functions\obj\Debug\functions.csproj.CoreCompileInputs.cache
+D:\important\иип\laba6\functions\functions\obj\Debug\functions.exe
+D:\important\иип\laba6\functions\functions\obj\Debug\functions.pdb
