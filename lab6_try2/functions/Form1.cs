@@ -20,7 +20,9 @@ namespace functions
         public double y;
         public double start;
         public double end;
-        public double step;
+        public double step = 0.1;
+        
+        
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace functions
                 MessageBox.Show("График не выбран");
                 return;
             }
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "" || textBox7.Text == "")
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || textBox6.Text == "")
             {
                 MessageBox.Show("Введены не все значения");
                 return;
@@ -48,7 +50,6 @@ namespace functions
                 x = Convert.ToDouble(textBox4.Text);
                 start = Convert.ToDouble(textBox5.Text);
                 end = Convert.ToDouble(textBox6.Text);
-                step = Convert.ToDouble(textBox7.Text);
             }
             if (radioButton1.Checked)
             {
@@ -60,7 +61,7 @@ namespace functions
                 {
                     y = x * a + b;
                     this.chart1.Series[0].Points.AddXY(x, y);
-                    if (xMarked == x)
+                    if (xMarked == Math.Round(x,2))
                     {
                         this.chart1.Series[1].Points.AddXY(xMarked, y);
                     }
@@ -77,7 +78,7 @@ namespace functions
                 {
                     y = a * Math.Sin(x*b) + c;
                     this.chart1.Series[0].Points.AddXY(x, y);
-                    if (xMarked == x)
+                    if (xMarked == Math.Round(x, 2))
                     {
                         this.chart1.Series[1].Points.AddXY(xMarked, y);
                     }
@@ -94,7 +95,7 @@ namespace functions
                 {
                     y = a * Math.Cos(x * b + c);
                     this.chart1.Series[0].Points.AddXY(x, y);
-                    if (xMarked == x)
+                    if (xMarked == Math.Round(x, 2))
                     {
                         this.chart1.Series[1].Points.AddXY(xMarked, y);
                     }
@@ -111,7 +112,7 @@ namespace functions
                 {
                     y = a * Math.Tan(x * b) + c;
                     this.chart1.Series[0].Points.AddXY(x, y);
-                    if (xMarked == x)
+                    if (xMarked == Math.Round(x, 2))
                     {
                         this.chart1.Series[1].Points.AddXY(xMarked, y);
                     }
@@ -128,7 +129,7 @@ namespace functions
                 {
                     y = a * (1 / (Math.Tan(x * b + c)));
                     this.chart1.Series[0].Points.AddXY(x, y);
-                    if (xMarked == x)
+                    if (xMarked == Math.Round(x, 2))
                     {
                         this.chart1.Series[1].Points.AddXY(xMarked, y);
                     }
@@ -145,7 +146,7 @@ namespace functions
                 {
                     y = b * Math.Pow(x, a);
                     this.chart1.Series[0].Points.AddXY(x, y);
-                    if (xMarked == x)
+                    if (xMarked == Math.Round(x, 2))
                     {
                         this.chart1.Series[1].Points.AddXY(xMarked, y);
                     }
@@ -162,7 +163,7 @@ namespace functions
                 {
                     y = Math.Pow(a, x + b);
                     this.chart1.Series[0].Points.AddXY(x, y);
-                    if (xMarked == x)
+                    if (xMarked == Math.Round(x, 2))
                     {
                         this.chart1.Series[1].Points.AddXY(xMarked, y);
                     }
@@ -179,7 +180,7 @@ namespace functions
                 {
                     y = Math.Pow(((Math.Sin(x) + a * x)/((x - Math.Pow(x,0.5)) + 1)),b/x);
                     this.chart1.Series[0].Points.AddXY(x, y);
-                    if (xMarked == x)
+                    if (xMarked == Math.Round(x, 2))
                     {
                         this.chart1.Series[1].Points.AddXY(xMarked, y);
                     }
